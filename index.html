@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Parallax</title>
+<style>
+#bigger {
+background-image:url('http://placehold.it/200x100');
+    height:1001px;
+    line-height:2;
+  
+}
+#small {
+    position:absolute;
+    
+    color:red;
+    line-height:14;
+}
+​
+</style>
+<script>
+
+            
+function onLoad() {
+    window.onscroll = function() {
+        var biggerdiv = document.getElementById('bigger');
+        var smallerdiv = document.getElementById('small');
+        var windowScroll = window.pageYOffset;
+            
+        biggerdiv.style.backgroundPosition = '0' +'px ' +(windowScroll/2)+"px";
+        smallerdiv.style.top = 0-(windowScroll/2) + 'px';
+    }
+}
+            
+            
+        </script>
+
+</head>
+
+ <body onload="onLoad()"  >
+<div id="small">
+    small area text is red<br/>
+    small area text is red<br/>
+    small area text is red<br/>
+    small area text is red<br/>
+        </div> 
+<!-- start slipsum code -->
+
+        <div id="bigger" >THIS WEB PAGE IS HIDEOUSLY DESIGNED <BR/><br/>THIS WEB PAGE IS HIDEOUSLY DESIGNED <br/><br/>eTHIS WEB PAGE IS HIDEOUSLY DESIGNED 
+            THIS WEB PAGE IS HIDEOUSLY DESIGNED 
+         <BR/><br/>THIS WEB PAGE IS HIDEOUSLY DESIGNED <br/><br/>eTHIS WEB PAGE IS HIDEOUSLY DESIGNED 
+            THIS WEB PAGE IS HIDEOUSLY DESIGNED 
+             <BR/><br/>THIS WEB PAGE IS HIDEOUSLY DESIGNED <br/><br/>eTHIS WEB PAGE IS HIDEOUSLY DESIGNED 
+            THIS WEB PAGE IS HIDEOUSLY DESIGNED 
+             <BR/><br/>THIS WEB PAGE IS HIDEOUSLY DESIGNED <br/><br/>eTHIS WEB PAGE IS HIDEOUSLY DESIGNED 
+            THIS WEB PAGE IS HIDEOUSLY DESIGNED 
+        </div>
+        
+    </body>
+
+
+</html>
